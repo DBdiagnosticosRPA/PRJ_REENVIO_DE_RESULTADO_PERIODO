@@ -1,0 +1,399 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Capturainformaçõesdochamado" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1153.33333333333,6075.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Captura informações do chamado" sap:VirtualizedContainerService.HintSize="724.666666666667,6010.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="0c576376-4a33-48ab-bfb6-227290fe88b2" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard.Body>
+      <ActivityAction x:TypeArguments="x:Object">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="690.666666666667,5791.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="Var_strConteudoChamado" />
+            <Variable x:TypeArguments="s:String[]" Name="Var_ArrayDados" />
+            <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+            <Variable x:TypeArguments="x:String" Name="Var_strConvenio" />
+            <Variable x:TypeArguments="x:String" Name="Var_StrDataIncial" />
+            <Variable x:TypeArguments="x:String" Name="Var_StrDataFinal" />
+            <Variable x:TypeArguments="sd:DataTable" Name="Var_DtCapturaChamados" />
+            <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="Var_QueueFila" />
+            <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="var_ConvenioRegex" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="[config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="628.666666666667,82" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, InProgress, Failed" QueueName="[config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[Var_QueueFila]" />
+          <If Condition="[Var_QueueFila.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="628.666666666667,393.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="400,198" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:DeleteQueueItems TimeoutMS="{x:Null}" DisplayName="Delete Queue Items" FolderPath="[config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="338,82" sap2010:WorkflowViewState.IdRef="DeleteQueueItems_1" QueueItems="[Var_QueueFila]" />
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
+          <uix:NClick ClickType="Single" DisplayName="Click 'Em atendimento (3)'" sap:VirtualizedContainerService.HintSize="628.666666666667,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c576376-4a33-48ab-bfb6-227290fe88b2" Version="V1">
+            <uix:NClick.Target>
+              <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/cad_chamado.php" DesignTimeRectangle="76, 349, 185, 32" ElementType="Text" FriendlyName="'Em atendimento (3)'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl id='ATE-0-0-0-EM_ATENDIMENTO_anchor' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl id='ATE-0-0-0-EM_ATENDIMENTO_anchor' tag='A' type='' class='jstree-anchor' aaname='Em atendimento  (3)' check:text='Em atendimento  (3)' /&gt;" Guid="733231b3-8865-4bb5-ad64-b65db81e0886" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL0AAAAkCAYAAADcvju7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAU2SURBVHhe7Zrdb1RFFMD7P/XBN6MP+mx81kdjTNbEryjygE2ARMKSSFDxAzFRuhqCRte0DVYQIlbbytdKKRbaVLewxdVSlbZalh7m6965M3Pu3rndu2t1zi85Dzs798y5Z3539tLQBwQRGCQ9ERwkPREcJD0RHCQ9ERwkPREcJD0RHCQ9ERwkPREcJD0RHCQ9ERxtpV9pzsKfCzUj1m7V1bcE8d8ElX7jbgta/6zC/Ok34fKnLxqxMFGB1voam7ShZhNdo1mFUn8/lGvq8/8ddb/9pSo01VAWtTKbn7NHqPTL16/A2aMD8NvsBKwu1Y1oTJ2EH4deg9XlRTW7ezSrJXFDaORoTGHUymztElR7tbAlvdzgMmyFZ0DuTZG1NKFasvdVjRl77/Y/b18c6f9qXIbG2UGY/2oA1uqj7Ak4B3BrEuDmaVj5+QQsjB+GS+zEv/7Dx/DrpWEnlq6dYb8Ud1S2zpCN7aFkWZD0MYVLj/WW3791uMke2HtQgzLrU8lzYxzpFyYGYW5kO5N8WEejCjD3ISzXDkFj8m24Mf4WzJ86AHMn9xvx0xevwLXjr8Ld9VWVrTNI+q37elOs9OpE97lR1RNb8Dz1ONLPju6DqWPPq0/5uMlO+l5LL558fhoIIfkpoD7LL92xVLCf0oRwyVxRJHLKE0hHcv/0hsgTCZsjUBsa5ymVDOnNjdWnW3LtSAZsLEm7euOeGvXofZB16GtF6CKte8jqOyPPw502N0cOXPrBx8yT3jNmRnbDN++9AHf+XlHZOsNbeqO5CbHiDvj8/HHpzbWc9dGTHnkXteZpSfRJ5ORWm5asMbpO+8Q/m9Lz7+NrEg+mvnW75ux63Z5GY3b9+rMAEc++DkWsnzFHgNQeo77zsN6Rfnp4L5w79CjAL4dzx9Wh7XDm/ZcKlp43zQ3jRLOa4I75N8REipUuEAMbs9bzEQS7D3sOJr35ICNjtoge9aK1WNe595TW4+wDR+RCRY7QD7iTPoGou90ERV+lUgEeERc/2wNjbzyCSp0V/B+//K8+/M+dRSAba2+QiZ/0+BiGXFM22H7A7I3npOVNjruCcJIypIhRhPTWmE+96Jy2tXBS7oFlyTpw0mrCEHOdXkpETR55+ur1OvCICFd6uWnmetZGpkkvrkNCrbflpGef0VD1or3qVPo2vc/emyRp66iaPPI4rzeTx3bDqX0Ps/ecvbnjavU5+PaDbb1/p7du1HcsSbaY/KP/SZ8kO3fKRvbwpE+CzuniSS9yZdSkketg+UTdbdaJcKT/7qOd8OWuB1iGnblj+uhT8PU7zwYlPX6dSXbuFDG6IL1PvZuTfvPv9LKv7WuKUXW4+bIfrghH+rEju2B4x/1we2wbtM4PsIJwwbGYqjwJoweehvW12ypbZ8jG9kZ62Xi9qWxAbBYfixuMNjzl55vPVcmypecf7QdKr4+LhsnkM5Zdr4/0br8Y9hyGyJUlNHIdR9yvuYCsHcuXkgPDkf589SB88vKDMLLjPvj9xDOsalxwLLojvdx4J9SmFCY9w1yPNxaRSG12sgY5HF0XhRbYS3qGs761kWaezUovaVcv2itEKqNeXaSYF49n9FySckrbudrkw3uM40i/VJ+Bi0MH4fOBh+D7dx+HC0ee8I4rx/fDjelx2GgV898QiIBwfunygD/YaTjSc/5YnIMLQ6/njsWZCZWBIPKS8trlgfzV8jvlOaj0BPGvEL3O5BA/ek3zeZePIOmJ4CDpieAg6YngIOmJ4CDpieAg6YngIOmJ4CDpicAAuAdNWRcIGv10eQAAAABJRU5ErkJggg==" InformativeScreenshot="dbb2cf85cf83ec61e031d0ff7fd457ed.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" />
+            </uix:NClick.Target>
+          </uix:NClick>
+          <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Var_DtCapturaChamados]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Numero_Chamado'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='13' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="628.666666666667,160" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="0c576376-4a33-48ab-bfb6-227290fe88b2" Version="V1">
+            <uix:NExtractData.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="316, 318, 1590, 240" FriendlyName="'CodAberturaTérmino prev…'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl parentid='divPainelVisualizacaoChamado' tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="6766252a-4342-45fd-8505-c1a4ada49ad4" InformativeScreenshot="69412b3ce29a812490f58dea9634c13f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: DB BOT' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+            </uix:NExtractData.Target>
+          </uix:NExtractData>
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Var_DtCapturaChamados]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="628.666666666667,4720.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="594.666666666667,4601.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="var_strCodigo" />
+                    <Variable x:TypeArguments="x:String" Name="Var_str_CapturaConvenio" />
+                    <Variable x:TypeArguments="x:String" Name="Var_StrTipoReenvio" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[CurrentRow(0).ToString = &quot;Cod&quot;]" sap:VirtualizedContainerService.HintSize="532.666666666667,336.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,141.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Continue sap:VirtualizedContainerService.HintSize="338,25.3333333333333" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <Assign sap:VirtualizedContainerService.HintSize="532.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[var_strCodigo]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow(0).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <uix:NClick ClickType="Single" DisplayName="Click ' chamados'" sap:VirtualizedContainerService.HintSize="532.666666666667,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c576376-4a33-48ab-bfb6-227290fe88b2" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/cad_chamado.php" DesignTimeRectangle="563, 377, 67, 60" ElementType="Text" FriendlyName="'1620688'" FullSelectorArgument="[&quot;&lt;webctrl aaname='&quot;+var_strCodigo+&quot;' /&gt;&quot;]" FuzzySelectorArgument="&lt;webctrl aaname='1620688' tag='TD' type='' class='' check:text='1620688' /&gt;" Guid="ede3f864-c609-49a7-90f5-898e5a16a2bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAABACAYAAABItWqnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKASURBVHhe7ZXBbcMwDEW9XDfpCu0OPWaHHHPvCkGRFTJAcylQIEXaixpblE1S5I9ToLd/eAhi0RL5RMnD6XQqJIZyAMPhcCgkhnIAw/F4LCSGcgCUA6AcAOUAKAdAOQDKAVAOgHIAlAOgHADlACgHQDkpe8pJeX2inIz37QPlZHy8DJSTQTkAHisEL2QEP+UQygHkcq5n7ud5U96jsZG3Tbk8DuWn8bJbxsZ39diVy3Zv378yXno65vxqxxvjl2OJeyifb3p8Xz6f9Xgwj8/18al86PGERI4smMmZivdJLoxFmwRFlhZUxag5wjklDy3eEOQpa83rixi9dpV9W5CT43YhkiOLZbsc44uo/2039SKmIlZ0r83FzlM3wYlYWUN6rLLEpsVQwglmviQ5u6O7cr5VgO+SCSsn7JL/kdMW3tTf6wKVWy1aC53nC4tyu9yO2bbGNsJu03P54ykidI7ZxnvulCNFmruhJZgLqkWrwqCcOnd7J7roraDWHQ1/b420vIUVYkb+JsdfkLI7Pmk9ZuZaLacvtIpoGxHdL+O4es8coaXT/q9zvBx53stJuio587W4GpvJuR0jOU65y/q+jqQDPX+8c9bJqbvcF5jJMV3h7w5By7FdtLA8x5vZP7fcKccmNz8PjkkqZqJKtjK9+Ei47YS4c3SMjZ9j0DWguFtOb71PAIupdIUFnRLH6E2QXHSePkb+axFLZ0lMgpMjhY4LGvxEklTDtGc2R0V3Vy0+HotjIuEulyhGBM2Em96Tdg6hHAjlACgHQDkAygFQDoByAJQDoBwA5QAoB0A5AMoBUA6AcgCUA6AcAOUAKAdAOQDKAVAOYPi6fBcS8V1+Aa+amvvjJnNTAAAAAElFTkSuQmCC" InformativeScreenshot="ecfec19cc1edf911d771c66650a5a4b8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: DB BOT' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NGetText DisplayName="Get Text '[12588] DB'" sap:VirtualizedContainerService.HintSize="532.666666666667,159.333333333333" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="0c576376-4a33-48ab-bfb6-227290fe88b2" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/cad_chamado.php" DesignTimeRectangle="600, 507, 496, 19" ElementType="Text" FriendlyName="'[12588] DB'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' /&gt;" Guid="bbb55c0a-0789-4b72-8976-37da1e3cf426" ImageBase64="" InformativeScreenshot="afc004418133ca18961c813dc39e5636.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: Mario' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[Var_str_CapturaConvenio]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <ui:Matches BuilderPattern="(\d*)" sap:VirtualizedContainerService.HintSize="532.666666666667,60" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[Var_str_CapturaConvenio]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Dígito&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;*&quot;,&quot;QuantifierID&quot;:&quot;ANY&quot;,&quot;QuantifierName&quot;:&quot;Qualquer (0 ou mais)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(\d*)" RegexOption="Compiled" Result="[var_ConvenioRegex]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="532.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[Var_strConvenio]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[var_ConvenioRegex(1).toString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="532.666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[var_strCodigo]" />
+                  <uix:NGetText DisplayName="Get Text 'Convênio :'" sap:VirtualizedContainerService.HintSize="532.666666666667,159.333333333333" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0c576376-4a33-48ab-bfb6-227290fe88b2" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/cad_chamado.php" DesignTimeRectangle="321, 573, 1579, 109" FriendlyName="'Convênio :'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' parentid='divConteudoChamado' idx='1' /&gt;&lt;webctrl tableRow='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' parentid='divConteudoChamado' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='17866528/11/202202/12/2022' /&gt;" Guid="42a4fd4a-3d69-4e2f-a7c3-69a2f9fdca90" ImageBase64="" InformativeScreenshot="adf440a963c4a0a76d9fc36295880912.png" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[Var_strConteudoChamado]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <ui:MultipleAssign DisplayName="Multiple Assign teste" sap:VirtualizedContainerService.HintSize="532.666666666667,254" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[Var_strConteudoChamado]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[Var_strConteudoChamado.Replace("Nome do Responsável ","").Replace("Telefone PRINCIPAL para contato","").Replace("Telefone ALTERNATIVO para contato","").Replace("Qual seu sistema laboratorial?","").Replace("Data Incial","").Replace("Data Final","").Replace("Declaro que preenchidos corretamente estão corretos e foram revisados","")]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="s:String[]">[Var_ArrayDados]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="s:String[]">[Var_strConteudoChamado.Split({"Tipo de Reenvio"},StringSplitOptions.RemoveEmptyEntries)]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="s:String[]">[Var_ArrayDados]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="s:String[]">[Var_ArrayDados(1).Split({":"},StringSplitOptions.RemoveEmptyEntries)]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[Var_StrTipoReenvio]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[Var_ArrayDados(0).Trim]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[Var_StrDataIncial]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[Var_ArrayDados(1).Trim]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[Var_StrDataFinal]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[Var_ArrayDados(2).Trim]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="532.666666666667,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <If Condition="[Var_StrTipoReenvio.ToUpper = &quot;DBUPAPL (APLICATIVO - TROCA DE ARQUIVO)&quot;]" sap:VirtualizedContainerService.HintSize="532.666666666667,2608.66666666667" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="496,2413.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,112.666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;É igual&quot;]" />
+                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Softdesk | Atendente: DB BOT" sap:VirtualizedContainerService.HintSize="434,2144.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="279c43d1-6f12-4219-91b9-c1cf6a76eece" Version="V2">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,1925.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Default="Chamado encaminhado para tratamento humano" Name="Var_str_TextoEncaminhamento" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="338,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                                <uix:NClick ClickType="Single" DisplayName="Click ' chamados'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_27" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c576376-4a33-48ab-bfb6-227290fe88b2" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/cad_chamado.php" DesignTimeRectangle="563, 377, 67, 60" ElementType="Text" FriendlyName="'1620688'" FullSelectorArgument="[&quot;&lt;webctrl aaname='&quot;+var_strCodigo+&quot;' /&gt;&quot;]" FuzzySelectorArgument="&lt;webctrl aaname='1620688' tag='TD' type='' class='' check:text='1620688' /&gt;" Guid="ede3f864-c609-49a7-90f5-898e5a16a2bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAABACAYAAABItWqnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKASURBVHhe7ZXBbcMwDEW9XDfpCu0OPWaHHHPvCkGRFTJAcylQIEXaixpblE1S5I9ToLd/eAhi0RL5RMnD6XQqJIZyAMPhcCgkhnIAw/F4LCSGcgCUA6AcAOUAKAdAOQDKAVAOgHIAlAOgHADlACgHQDkpe8pJeX2inIz37QPlZHy8DJSTQTkAHisEL2QEP+UQygHkcq5n7ud5U96jsZG3Tbk8DuWn8bJbxsZ39diVy3Zv378yXno65vxqxxvjl2OJeyifb3p8Xz6f9Xgwj8/18al86PGERI4smMmZivdJLoxFmwRFlhZUxag5wjklDy3eEOQpa83rixi9dpV9W5CT43YhkiOLZbsc44uo/2039SKmIlZ0r83FzlM3wYlYWUN6rLLEpsVQwglmviQ5u6O7cr5VgO+SCSsn7JL/kdMW3tTf6wKVWy1aC53nC4tyu9yO2bbGNsJu03P54ykidI7ZxnvulCNFmruhJZgLqkWrwqCcOnd7J7roraDWHQ1/b420vIUVYkb+JsdfkLI7Pmk9ZuZaLacvtIpoGxHdL+O4es8coaXT/q9zvBx53stJuio587W4GpvJuR0jOU65y/q+jqQDPX+8c9bJqbvcF5jJMV3h7w5By7FdtLA8x5vZP7fcKccmNz8PjkkqZqJKtjK9+Ei47YS4c3SMjZ9j0DWguFtOb71PAIupdIUFnRLH6E2QXHSePkb+axFLZ0lMgpMjhY4LGvxEklTDtGc2R0V3Vy0+HotjIuEulyhGBM2Em96Tdg6hHAjlACgHQDkAygFQDoByAJQDoBwA5QAoB0A5AMoBUA6AcgCUA6AcAOUAKAdAOQDKAVAOYPi6fBcS8V1+Aa+amvvjJnNTAAAAAElFTkSuQmCC" InformativeScreenshot="ecfec19cc1edf911d771c66650a5a4b8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: DB BOT' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="338,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Encaminhar chamado'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="279c43d1-6f12-4219-91b9-c1cf6a76eece" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/cad_chamado.php" DesignTimeRectangle="14, 247, 68, 59" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl tag='I' type='' class='icon-person7 tooltipstered' aaname='' /&gt;" Guid="abdacd97-3603-4380-a947-db56d5fcc3aa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAA7CAYAAADCZyymAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAANqSURBVGhD7ZtdS+NAFIb3HxcsmItCCwYs2DsFCwYMrLCCXkmQZREpJZRQpPRCliBBQiklSNb6E96daLMmk5OazCTZlZ2Lh0KazMfTmTNnJvTLy8szFO8oIRxKCMdWIes1ff0zs17/Iq/HqBHCoYRwKCEcSgiHEsKhhHA0KiQMfmJuj2GPbjFin3N3hZC472/SiJDQH8PUd9BqtbK092Daj/+MmNqFBM4JOpQIDu3oFj7xfNPUK8S7Qp/ofB6aOaPLaZAahTzA0umO59PFuUuV1Rz1CZmfQiM7vR3NnNLlNURtQrzLLtnhD9FOMSfKa4rahDhDorOFOIZDlNcUSgiHmjIcKqhy1CdELbsEKjHLolJ3ArW5y0Ft/z8hSghHTUKe4M2jqXGFM+MERlHOr2HbM7jBE1FmM1QuxLdPobeJ4FmKHejmGH5I11EnlQrxrH2icxJ0TuAEdF11UZmQwDkWStU/pH8Fj6ivLqoRUjIjLYtmTBtbnisQssDNgO5IdezCnFN1V4+8kDuxXW1p9GamjqSQBb73icazXWuvR10vAvFs74Aty19h+1QbqkVOiPsNvWTDNwxuFhInZnuw7scYaslr+7A8ov4akBJyZ+4mGr1h8ANLobOQGCaEdT4YHaavv5bL9kPuBRnAteEEAdc+ESSEzGCmfsWIt86IHQ7FxGVkg3U08qK66XxnF0N7tWmbOOJCvIvMdHk//pMR0sVlPD0yx5CHGL0mais2JYnRWcHUEhYS8kP6zy8bISOkhaGTrosknMLIjFCGZCInLGTOx4/Ussgam/yuJIWEROQkhDJHkYJCHmFxy226ERMME9+VhRfiWXvkffmweOKIxRNBIdkREAe8N+SEHI3S2//yQhjaMWyBjaGYkExA5VNrOSG69ZAoS1CIYIAVEpINqKzyZBbpy2325IU0PmWiE7FrnA26aL82gHsfy4KdnmlkcXghueQE1X7R5wkEhSQIV3CdWXqpkxRSaJUI2LQkll3ZjFVeCMVyDKOT8x6mCKxTZLkxTIbRIZ6r4DCpHiEbQm8CyziArhWT0+7s4+j8FvfLbYfMLOkjd9gHuFlS95ejViEp2NRaujPY0YuqFFPc+wsEBQ+UA3dClDHGnSu/j4loTsgnQQnhUEI4lBAOJYRDCeHYKkT9K/O/5xm/AbnhIPHkgTt+AAAAAElFTkSuQmCC" InformativeScreenshot="24d31df4aed4b4da0ae34a331bed1791.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: DB BOT' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="82, 247, 68, 59" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl idx='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl type='' tag='I' class='icon-pencil tooltipstered' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAA7CAYAAADCZyymAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJ/SURBVGhD7dvPaxpBFMDx/sdChO4hByGFzlFIDkIC8VCI0JyChxJKECk9hFJEQiiyiJQclrKN+RNe86yT7L59u+yPmdnZ9h2+YEbd5X00qwz45unpEaTXBIQkIKRCkO2WX+9y2+1vdl0n7xCSgJAEhCQgJAEhCQhJQEgCQuoIyC/YLOYwm93Al8UaYvYxZuoAyBpmJ2+h1+u9FAyvIWQf2zzPQVbweZjGsI3iMUg+hq6vroyjeAqygqk6YBFoplH8BAmvQDHD52YQxS+Q6Cc8xPvbLaH4AxItYaJwsI/wI4nSJ4MXFIy/Z49bMT9ANIYerjbKKXyjx65Y+yAUQ1cHJTiHBT1+xdoFie/hkmAMhseggv3fFVHUdJU9R8XaA2Ew1OU9xNEcRhoEK4lyePYVInqOGrUDwmFMlhBFtzAepNd3qQu4i/bPDa9hmAR7zhQG5h4kFyPnWqLLQRmMb41hYG5B6mLoCMrZxCwG5hAEv46nB9y9umUxdEkUCzkCycFg3jFlUp/WzDnM5AAki7G7CNbEMH3NoFkGycFg1stkGwOzCJIdOhj5jYFZAukmBmYBBIdOb+40wTD5patMhkE4jDk8xNn1MrnGwAyCdB8DMwTCDx2oYxip4o1irr//Ytx57GcAhGIcgBqfVtv+S9QmBtYYZDN9nxjoGWO/JxHdXVRGaRsDawwSTo9eBjr8sEzdVwXFBwzMKMg7ZseqDIovGJh1EKwIZfdJxDynrYyCJKM4HIpvGJgzkDB18fUTA3MCghj9xH3ByQ1sEsfwKWsgefmMgTkF8R0DcwbSBQysMci/loCQBIQkICQBIQkISUBIAkISEFIhiPwq87/vEf4A8RCJtP+RJ70AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="338,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Grupo de solução'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="279c43d1-6f12-4219-91b9-c1cf6a76eece" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/chamado.php?acao=encaminhar&amp;cd_chamado=1664391" DesignTimeRectangle="433, 409, 31, 39" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' parentid='conteudo_ajax_grupo_solucao_encaminhar' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' parentid='conteudo_ajax_grupo_solucao_encaminhar' tag='SPAN' type='' class='select2-selection__arrow' aaname='' /&gt;" Guid="454a3108-3427-49a3-9b11-5d0a0e3dffc3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAnCAYAAAD3h5P5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEHSURBVFhH7ZgxD0NAGIb9fJt/YLMom5j8gbKZLZhEKYOwfc2rraQlwqnvht6TvMnlI3lyfCfutPu9ojNT17fFOqLZtk1nJggC8n2foug6lxMDbdtSnufkOBcqy4JX/qbve3JdV44cZFlGYfh8BezypmnGHpAiB2hCrAIpcqwCaTNXciVnRcm1JEleJT52z9zzPNJ1fTW4ZwtCj92yrEUpgmtbEZIPw0Cmac7EqOHaVoQbrigKMgxjEmOM2h6E5SBN00mO8V4muWi3x3E8RoRDMz+Kkis5K/8rl/bfLnXHgs9xFIX88q7r+HepeNSYMcQf+3N03plZPZn4Lvw6q2cyS0WuSJRX9ACAGDAJN6xBEQAAAABJRU5ErkJggg==" InformativeScreenshot="aa83f808ae807f312326df07699df91c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: Mario' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="37, 380, 448, 27" ElementType="Text" FriendlyName="'Grupo de solução'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl parentid='encaminhamento' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl parentid='encaminhamento' tag='LABEL' type='' class='control-label col-sm-12' aaname='Grupo de solução' check:innerText='Grupo de solução' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcAAAAAbCAYAAADrq18rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAPeSURBVHhe7dtNThRRFMVx98QqWINsgzljWYPMZCorMIwMMwlzDBPDyLCCTpmDOeT4vK+6AKvapv6DX9Dnq/dxO7nH6oR3m81muL29HR4efgIA8OYp85R9BCAAYFUIQADAKhGAAIBVIgABAKtEAAIAVokABACsEgEIAFglAvAfu77+NhweHg4HBwfD+fmncs4u6Cw6k1xefinnAMCaLBqA9/c/huPj46dGnN5KU15zAJ6efnhcX/dXHVyL/6kOAGCLBaCarhuwGqXHHYpumvnMPlprAPrz1c+7u+/D0dH7x7/rs9VnXD0DALu0SABmKGT4pYuLzwTgjJZ4AwSAfbJIALZfjVVzUs6/uvr69LWpGne1VhWwOXZycvLHV696O9FbSrWnTT1r7tNqAzBDSKbs0fva2PeUfOOy9s2rCsCptTS/5SXXsr2btTWQai6hDGBpswdgNucqeCptGNlLA9BzM0wcEDlWPTvWmHOeG301Jj6398gw6e2RtfNz4jroz9VZHTBZ7wwdz/OZXJ92vdzTc3NN/VTt9FPr533zflUdXP+8Y84DgLnNHoDZUN30qnmpasxj/1Y17V4jdxD4+WzUDgbxPmOhXc3Jfd3QvUeeuQpjr2s+q+TZUnWGDBXfvVrLz+a5qrr1ajSmul9VG2k/k1wHAOaykwDM5pjGGrNNbdrVmLTNvLfXtqacIZMBlvu6yXuPNkx745ahZRlAvTNkfT2ea43Vuapbr0atfDaNnUHazyTXBIC5zB6A2aSrRj+1MdvUpl2NSTZb7d3bq9esrRc+ua/W0Jj36OkFYAZZS2tPCUCvPbXOVd16NUp5R62fZ/DZejVtP5NcFwDmMnsAZiOsGujUxmxTm3Y1Jtls9efeXj5XdQZ5SQD2gm6brKFprZub660B6PGpda7q1quRVc9MPYO0n4nHAWBOswegZINzg7SlA7B9vtd8Pa8XWlWD13ju6wDs7fFcuafPVZ0zw9l3f00Abjt/deeqPtU88dnyHAAwt0UCULIBu7G242ON2apm7PnitatGXo1lo67mVQ3fqrPkfdzkq+DKNRwQHjM97zNJnstrV2f1GXKvPJfnVefXfh6ratQGrcarN9FcO+/n9T2WYe07AcASFgtAyUbacgMWN0k1djX4XEOymcvZ2ce/gi2DoVU12mz80tu71Z5Fv3Pofdt9MhRSBkRq17aslWSIWLtmrpXPt3tUtezNFQdiW+/83cuxs1h7JwCY26IBuKRsyG0jx+v4PzK94AaAfUAA4tlcW+oKYJ8RgJgsv7rk7Q/AvnuzAQgAwBgCEACwSgQgAGCVfgfgZvgFHwi0v8sK9BwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="338,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                <uix:NClick ClickType="Single" DisplayName="Click 'IT B2B/CUSTOMER SERVICE'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_24" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="279c43d1-6f12-4219-91b9-c1cf6a76eece" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/chamado.php?acao=encaminhar&amp;cd_chamado=1664391" DesignTimeRectangle="60, 491, 402, 39" ElementType="ListItem" FriendlyName="'IT B2B/CUSTOMER SERVICE'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl aria-role='treeitem' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl aria-role='treeitem' tag='LI' type='' class='select2-results__option select2-results__option--highlighted' aaname='IT B2B/CUSTOMER SERVICE' check:innerText='IT B2B/CUSTOMER SERVICE' /&gt;" Guid="623e574e-fc24-4c9c-80db-3f33280c27db" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZYAAAArCAYAAABb266JAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVJSURBVHhe7ZpLbtw4FEV7mb2zjDP1KjLIFgJkAfasU5l4YCBxqSWSj8XPJcWSmaDsOg84QCKRfB+p7q1K9z8/f/5YHh4eFoIgCIJ4S2xesnkKxkIQBEFMCYyFIAiCmBqVsfz76RcAAMBhMBYAAJgKxgIAAFPBWAAAYCoYCwAATAVjAQCAqWAsAAAwFYwFAACmgrEAAMBUMBYAAJgKxgIAAFPBWAAAYCoYCwAATAVj+fS6PC7L8vhd3QMAgGs5YCxeiLM4vS5fTuHPvXg5L59Hz3RxXr59TdZ9PS/P4U6MNXd61uenc7hRRLEu4s4s8qzIfqz+UMfz0+9sj+O7z58Zlao75Lx6buKsuo7LPKVhhhq3Gr6Ea825bWH547485Bwk+jnHGhvn+7BaG+9K9m75Nc264jMSZ5XviazJ3pffy7eXcEnE+FwAPhaHf7F4IaoF2XCC2TSSkvABLz7UXnQv4rd9yLMPq4lssk/W1TECt16IUpY3sNXjRPAaYwl/L9duedX+3txM/HOzCPXKHtaoDDUVw9JY2s/TUfaWXJOzSBHPyrHtt2vq/Ar1rtQz6M2xfK9avft1op5Yc5hlIw/AvXLTxjIiNGMi0RIAfz0VxfI8ybCxXC88zbn1clb3/DyfT9t1ZbLn5XFobgWN5zEys6G5HjaWlXKv+7vqp94vex+qBWMBUERjOZ3+e5fGYnUcM5Ytb7K2J94pw8bS6KtDa257wpzf93mfn161ca71lOf9WWMZFOAhMR99V2wGxTMSOereRw0DYwFQ3PAvlpEPbVizJ5AtwXLXE0EcEraVYWOp69tDzy2c0zGovO9EVLMet+t+zTxjGRNXy3f9+SXaWFT9apa2Ln0e9V6do2asd4B747aMpYoxIUoFwNclQoiEq7Hau5NzY9hYVsJaH/sGo+c2IHRZXr/e1+f/vF13/YWzTehzY9ER+xTCPzyz7Bk31tvzVBF7F7NoPQ93XppLG3TVQ+/5ZtgXBxUjMwH4mNzwL5aL2OlvsCZUe98+k7VZPf7aIZG8xlhSCpNReeYbS+hrPfNxFUGrSxvLTu9K+Hs1NbFn5yPOqje7SL7XR8uw8znY/Mvzq96vNZbh9xzgPrhpY+l9cE0Yy/zNukrRcuJRrHNr2j1FjhpLJPTb6qu6rr9pp+R9a0Hd7psAv8VYrDd/xl6vPewbf6jjmtnZLMKe1mzSeVqPpQnVvRfza4KxAChu3Fj0OT63FqBmXcW3VbeurG/4m2pHeAbNqTWf7nUhivp+WV9tTOV5e8/TUQl/YQwHsLxu/xFjWem9D5fn0TbnuvdRw8BYABTv4xfLqIjE+6KuTPD9ucoY9gTcsy9SR/c359Yzvepex/gCc4xlxX4NHRTXrN+DxhLnKesPs3D/67U+W/Y+VEvIi7EAZNy0sZj4WQ6fs/9hl3WZ+MXzt3yt2kMt6/3SHLZ6Yu6OyOYCX+fpza43N9m/FPYgpn/DWJLr7XxegFv7ujOt0O9KvC5m53vdQht+q3fbJ+t2+TEWAMUBYzHhTaL6kPcFskac6SIXgotA1GGiZuJbRiZ6TsC0yBgyV9mniXoSpQjpetq5d+cmctaCftRYGmH1dITf5tXMGfbmUYi5XGNhtbaMJdlfzs+ut8wojXJNo25fi/1S0tGbP8BH5vAvlveME0ElTAAA8Gbu0Fj8t9T+P7cAAMBR7s9Y3D8l7fy3BAAAOMwd/mIBAIA/CcYCAABTwVgAAGAqGAsAAEwFYwEAgKlgLAAAMBWMBQAApoKxAADAVDAWAACYCsYCAABTqYyFIAiCIN4S3lh+LP8D1ZdLmUvCVVgAAAAASUVORK5CYII=" InformativeScreenshot="dfbbba55a8c6b2d89f6159031c08ed6e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: Mario' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'IFRAME ds_encaminhament…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,221.333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="279c43d1-6f12-4219-91b9-c1cf6a76eece" Text="Chamado encaminhado para atendimento humano, o mesmo é  DBupAPL  " Version="V1">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/chamado.php?acao=encaminhar&amp;cd_chamado=1620688" DesignTimeRectangle="531, 454, 1353, 337" FriendlyName="'IFRAME ds_encaminhament…'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl id='ds_encaminhamento_ifr' tag='IFRAME' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl id='ds_encaminhamento_ifr' tag='IFRAME' type='' class='' aaname='' /&gt;" Guid="f8d519ac-da58-4a38-9e1f-9fbb42c524e9" ImageBase64="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" InformativeScreenshot="abfa248b924ee5794776767182dca4cb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: DB BOT' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Não'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_25" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="279c43d1-6f12-4219-91b9-c1cf6a76eece" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/chamado.php?acao=encaminhar&amp;cd_chamado=1681774" DesignTimeRectangle="529, 796, 55, 38" ElementType="Text" FriendlyName="'Não'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl aaname='                                  Não                           *' parentid='encaminhamento' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl aaname='                                  Não                           *' parentid='encaminhamento' tag='LABEL' type='' class='btn btn-primary btn-sm' check:innerText='Não' /&gt;" Guid="c73e405a-d6c0-4aaf-ad39-52923a7527d8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAqCAYAAAANryONAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIvSURBVGhD7ZqxTsJQFIZ5BKKDJkz6ADKYGGVzgcVFBxfdmVxMfAESXYwkio9AopNBVBzECUJiSAwTAZVBC8ShhY31mL/20EvBRMUb4XK/5KS9PaW5X8+5TRPqa7ctmpTQsohWyxx4fJyjR/b5tUHHqSKt76dpafeMFnaSYx2zK5s0t7xGN9kcga4sRLcOM3R6XaKnRttOjjsQNd5NZyTInlwWbVGV4IqCh1LZlUXrqlJRLxCdmgl8yuJhhDWqKouhVfL7/W5lsaBVBaITIZvL5bSsk1YLLatlFUDLatlvks/nyefzUSQSIdN0X7yxj2PIi2OcG4vFqNPpUDQa7eZlIE0WkUy61/HKIidK4nxsMZaFFFlIxePxnup6Zf8DabLVatXecnW9sthyBwzqBICxmB/2RkmThRwmy/uDZEU5luc8Wpx/CyqVCgWDwW7+N0iVFQW9sl44jxvw1bm4AcOsa6myAJPHBA3D6BPwtikCx1DFcDhsb0WQE6/9U6TLcpVSqVRXlp/AaEsW4vPGWhZgkpg8rzkWE6ssyg7Kg5FvY8CT5wcQVxaTZ7DPbcxj8Tqo8kg/oEQgwbKAJ89rlducZQH/hmMYUfDnsqOMltWyCqBltawCTJQs6JG1LJNCe+dOSj36/tjaOEhTpd5y0mpxcVeg6cC8K6vin9GZe/dVM1t4dGVf3pq0fXRLiasSVRWpMD4zKNfqzkj4zABRM5qUSKv3AQlXuEdWDPU+DbLoA8Irj/nPvUH1AAAAAElFTkSuQmCC" InformativeScreenshot="04dc60e08e7a4786cf299e453599cd18.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: Mario' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="338,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Gravar'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_26" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="279c43d1-6f12-4219-91b9-c1cf6a76eece" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/modulos/incidente/chamado.php?acao=encaminhar&amp;cd_chamado=1620688" DesignTimeRectangle="1829, 982, 82, 42" ElementType="Button" FriendlyName="'Gravar'" FullSelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl id='btnGravar' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframeConteudo' tag='IFRAME' /&gt;&lt;webctrl id='btnGravar' tag='BUTTON' type='button' class='btn btn-success pull-left btn-margin-left' aaname='Gravar' check:innerText='Gravar' /&gt;" Guid="486cedcd-2b92-4592-bc8d-15c1351a611a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAuCAYAAACyJ+5bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALhSURBVGhD7ZvLTttAFIb7gEgBZQViExAgUPIavAIbg3iCJO0CJYSUBbuuSsSSRdXSBVLFJlAnomKq39KPjsdjx5AcpCTnSJ+CZ8748s3FLDyfxuOxM2aPiVWiUOxoNAqWG5PdBMVGg8jtdHdco99wK80VI0DjopE4ir5HGX8gJXYYD12lVXFb51tu/WzdbXY2jQLgqHZec6vtVfcYP+aLrbQrbuNsI3gSIx84W2uvhcVG11FiP9TQmEytW3Mng5Os2O3Otk3/KYA7rLkpsXjD7ff2gw2M8sAh/1t4HbF404WSjfLAIX2a2BliYpUwsUqYWCVMrBImVgkTq4SJVcLEKvEhYo8GRy7+Fzs/HkYP7vDbYbDNvKMu9vLXZSLx5s9NqhxCIRb1snxRUBXbum2555fnjNRlQFXs3fAuWQKwFITqJcjFCO786CSdgXb9n/3MEoI6dBjaoMPkMWH51e+r5Jx+yFmCXFyjedtMfkPnew9qYjnVISxU74M8hFx30SE4lh0jO4trt5wR8rr4+/7vfUqU3xk4RvCczJsWNbF86LeIlVLzgBCcl2L8diiHuLy1m/fFeo7YWUoFHyqWo0kGR1uRWNT5QTH49UegL4qjUgavO3diKTFPFkdWkVjmyAf3RyQ7EOfhNdmZrJPiZT6O504swAPm3XQZsUWy5VRnHl98RdN8IcT68orqphGLMsjBi0rmL6xYgBtHQJIsLyMWdchBrmyDkGLRBm0RPB9ADoK5lIpgHn7nUiyQD8SQwkBILMsZqPenO/E7QZYzcA/8f3UhxC4jJlYJE6uEiVXCxCphYpUwsUqYWCUyYvHp4UHvIJhslAcOM59x4qNZ+/D4/cDdbnc3PWIBdn/s9faCjYzJ1L/W3engNCsWYIOCbe54O3BW/Vx99QhSYrGlBltrbDtSOeAImzqqX6ruKX7KF0uOr4+T9aJ+UU/edEYWbC6EI7lTRhIUSyZta1xmit2M3X/HBN/zQK0ukgAAAABJRU5ErkJggg==" InformativeScreenshot="984dc64c01a063e67baa224911e87931.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: DB BOT' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <ui:Continue sap:VirtualizedContainerService.HintSize="338,25.3333333333333" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="-11, -11, 1942, 1046" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAdCAYAAABFRCf7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAPkSURBVEhLjZX7T5NnFMf5hb7vW/4Mkb9gP2zRxELiJbup23SbVvA2Fje8ockKzkviFnVGl4ybGLzFqBsICiyDTVBRZ6hSxQoWqoBCW0pVWgR+/nrO0/d5+7altCc5eZvnOefznD7PuWSlkumJCbDOzKGz/A2FxL5unl6EU4bKtvPCEyOb9roQvlqOSdI3JwowebIAkbOFeNdRjZmeljjbWYpcx8SLNJgadCFUX47RH60Y+cEqvs++0/CsWENguxV+Uv6GD+WJgwWUVMfERP7l8IALL48UoG+rFb2bNTR/peLy5wpqVyi48KmC3wos+GOpgobVKrzf04E1G4xodVRUzH/bczgfjwl2v1DD5ZUK2r5WUV+0APdrHeiqdqDtsB2te2y4+JkiDhypTgHll+TFoZYqAfz3GwKtUvHPWhWea1WGk1mDfS407lyCRyftxpqOi4pc7D9fJiJj6B27BueOhYZDJqrjoiIXe07YRXSd36roLtIw+Ev+3A4k/ufPjT3WwNDQ3FDncTuurFRFtP302mPleTEngujmmYl0vHXEjg6K8swnCnwlVryiVHpLuSn3WUMjI5nBpwIB4TDUdR1Xv1Cxf5FFvGxopxVjDD5IET+MT/a3o6Pp4dK4cdcSNH2p4qcPs3GDHmxydw7G9YSf5GRvKo+DT4+Pp4ZLo3FKlY5f7fh7TTTiY/kWDBRbESnNQXBHFM6RvzPBMwL7n7pwp8YhqqhiqQXbP8jGUZtF3PeUhNOdh3833XcwmB7MylH/f8qBUwQ/S4/3sx55zyYNb3ZFe8LrA7EM4SLSMcnidjpjhjr8LkXO8KrlCso+ysbNdaqIeHgb3fV/sarTEaklMcEZfmH9AvGQBxdb4N6qift+WRaLVndNL0+6uw2nAIHb9tpQ97FChaKgd4sGD7VEuR/XsPmiwz4fRj2elKdJx4HrleLRLlFLvLdBQx9VH7dM3puSmSCNpUb8frxwu5PgPq9X7HPj4RxupbTj5sOdTfomQWc7aUzov+fTJ4fycXu9JnK5kx7MW5HQU80N+uFGDZE5qsasr6jTc2Tt1HT+XKUQnBp1a8LrS2io34Vb6zRx8Vw1Ico/HnRhGnSRRhp8dYXw7csTI4Tz9BzlLYNvbss1gMHh4diVyUU+mWcPv2wPRc15yANujKqHE91NBzasVlBDuVpPdu3FuRjuajagOi4qcjFI0fKIOE8D7i86gIcc/65cxmrBGTqMI7xGeeqqcxiwJCALh2024CR3NVSinYZcE3Wt1lIbmnfb4DwdHX5mW1YdkyzuBw+SjNMpV1xpSUlqqFkSa9+sY4ODuNHSMg8oK+s9vaZR86rpghYAAAAASUVORK5CYII=" InformativeScreenshot="ddc0e9fb440757c959db85042ae5e660.png" Selector="&lt;html app='chrome.exe' title='Softdesk | Atendente: DB BOT' /&gt;" Url="https://ticket.diagnosticosdobrasil.com.br/" />
+                          </uix:NApplicationCard.TargetApp>
+                        </uix:NApplicationCard>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,104.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="[config(&quot;OrchestratorQueueFolder&quot;).tostring]" sap:VirtualizedContainerService.HintSize="532.666666666667,25.3333333333333" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[config(&quot;OrchestratorQueueName&quot;).tostring]" Reference="[&quot;Numero de referencia: &quot; + var_strCodigo]">
+                    <ui:AddQueueItem.ItemInformation>
+                      <InArgument x:TypeArguments="x:String" x:Key="Codigo">[var_strCodigo]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Convenio">[Var_strConvenio]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Data_Inicial">[Var_StrDataIncial]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Data_Final">[Var_StrDataFinal]</InArgument>
+                    </ui:AddQueueItem.ItemInformation>
+                  </ui:AddQueueItem>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+          </ui:ForEachRow>
+        </Sequence>
+      </ActivityAction>
+    </uix:NApplicationCard.Body>
+    <uix:NApplicationCard.TargetApp>
+      <uix:TargetApp Area="-11, -11, 1942, 1046" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAdCAYAAABFRCf7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAPkSURBVEhLjZX7T5NnFMf5hb7vW/4Mkb9gP2zRxELiJbup23SbVvA2Fje8ockKzkviFnVGl4ybGLzFqBsICiyDTVBRZ6hSxQoWqoBCW0pVWgR+/nrO0/d5+7altCc5eZvnOefznD7PuWSlkumJCbDOzKGz/A2FxL5unl6EU4bKtvPCEyOb9roQvlqOSdI3JwowebIAkbOFeNdRjZmeljjbWYpcx8SLNJgadCFUX47RH60Y+cEqvs++0/CsWENguxV+Uv6GD+WJgwWUVMfERP7l8IALL48UoG+rFb2bNTR/peLy5wpqVyi48KmC3wos+GOpgobVKrzf04E1G4xodVRUzH/bczgfjwl2v1DD5ZUK2r5WUV+0APdrHeiqdqDtsB2te2y4+JkiDhypTgHll+TFoZYqAfz3GwKtUvHPWhWea1WGk1mDfS407lyCRyftxpqOi4pc7D9fJiJj6B27BueOhYZDJqrjoiIXe07YRXSd36roLtIw+Ev+3A4k/ufPjT3WwNDQ3FDncTuurFRFtP302mPleTEngujmmYl0vHXEjg6K8swnCnwlVryiVHpLuSn3WUMjI5nBpwIB4TDUdR1Xv1Cxf5FFvGxopxVjDD5IET+MT/a3o6Pp4dK4cdcSNH2p4qcPs3GDHmxydw7G9YSf5GRvKo+DT4+Pp4ZLo3FKlY5f7fh7TTTiY/kWDBRbESnNQXBHFM6RvzPBMwL7n7pwp8YhqqhiqQXbP8jGUZtF3PeUhNOdh3833XcwmB7MylH/f8qBUwQ/S4/3sx55zyYNb3ZFe8LrA7EM4SLSMcnidjpjhjr8LkXO8KrlCso+ysbNdaqIeHgb3fV/sarTEaklMcEZfmH9AvGQBxdb4N6qift+WRaLVndNL0+6uw2nAIHb9tpQ97FChaKgd4sGD7VEuR/XsPmiwz4fRj2elKdJx4HrleLRLlFLvLdBQx9VH7dM3puSmSCNpUb8frxwu5PgPq9X7HPj4RxupbTj5sOdTfomQWc7aUzov+fTJ4fycXu9JnK5kx7MW5HQU80N+uFGDZE5qsasr6jTc2Tt1HT+XKUQnBp1a8LrS2io34Vb6zRx8Vw1Ico/HnRhGnSRRhp8dYXw7csTI4Tz9BzlLYNvbss1gMHh4diVyUU+mWcPv2wPRc15yANujKqHE91NBzasVlBDuVpPdu3FuRjuajagOi4qcjFI0fKIOE8D7i86gIcc/65cxmrBGTqMI7xGeeqqcxiwJCALh2024CR3NVSinYZcE3Wt1lIbmnfb4DwdHX5mW1YdkyzuBw+SjNMpV1xpSUlqqFkSa9+sY4ODuNHSMg8oK+s9vaZR86rpghYAAAAASUVORK5CYII=" InformativeScreenshot="a76d4ecf217ce2f9f018cab6bb652c20.png" Selector="&lt;html app='chrome.exe' title='Softdesk | Atendente: DB BOT' /&gt;" Url="https://ticket.diagnosticosdobrasil.com.br/" />
+    </uix:NApplicationCard.TargetApp>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+  </uix:NApplicationCard>
+</Activity>

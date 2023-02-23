@@ -1,0 +1,138 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="UseBrowserChromeSistemaChamadosDB" sap:VirtualizedContainerService.HintSize="1153.33333333333,1480.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Sistema Chamados DB" sap:VirtualizedContainerService.HintSize="434,1416" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="9891efc4-8e9a-4e44-953f-89808b44d5bf" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard.Body>
+      <ActivityAction x:TypeArguments="x:Object">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,1196.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT lg_usuario'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,221.333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="9891efc4-8e9a-4e44-953f-89808b44d5bf" Text="RPA" Version="V1">
+            <uix:NTypeInto.Target>
+              <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/login.php" DesignTimeRectangle="691, 648, 559, 51" ElementType="InputBox" FriendlyName="'INPUT lg_usuario'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='text' aaname='' /&gt;" Guid="4058495b-523b-42e2-a09d-3ac359c6fcca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjMAAAA3CAYAAAD5XMv9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAT+SURBVHhe7d2vb+pqGMDx+08jEBWYiooaxBEYBAIzUTGLQMwgKjAIxJKlGd2AQQOMkZHn9i1vf0DhsHvPGeubfD/Jk0NLy3rcN20p/wgAAIDBiBkAAGA0YgYAABjtbMzs93vZbreyXq9ltVoxDMMwDMP86KgmUW2iGuVUKWbUxmEYJrNcLmU+nzMMwzAMw/zoLBaLrE9UqxQdxcz7+7u8vLzoJQAAgOpRrbLZbPRSIWY+Pj7k+flZLwEAAFTXZDJJ2kXJYub19TU5MwMAAFB1qlmm02nyOouZIAjk8/NTLwEAAFSXahbVLkoWM09PT/oVAABA9aXtQswAAAAjETMAAMBoxAwAADAaMQMAAIxGzAAAAKMRMwAAwGjEDAAAMBoxAwAAjEbMAAAAoxEzAADAaMQMAAAwGjEDAACMRswAAACjVSRmRtKt16RWi8fty0yvvSQKBuK1XGmk+6ipN8RteTIIIr3VebvQP+xr1fN9a3VpNFxpeQMp7j7qptu40s8OKpB7O92vJnW3J6F+J5f/f9x8RwAA8A0qEjNDaes4qDnn4iC1kWGnkYXEpbG7o3jLUzMZtK/vW2sP9fbxUbXT9Y70soMqHKue1mCn30vl2zj5jgAA4BsYFTPhvZNHhN0RP0wjYiezsSdu4UxNa1DMmTiC2lb2Xt3pih9s4r203UaCcV/umg2pd0Z65fWYsW378H7pmIkZAABuxZyYifripttYbfHLp17UdSGx0m1sTwK9eue3DuvUNK9fxkpdixnnvi9dS722pJs3UIyYAQDgVoyJmeiheXg/nob3qNeeehSvoT+n5kovqZZIHpr5uv7vb6k5cjVm4pWBp8/ONB/iv5QiZgAAuBVjYiYPi5oUbmspKW/n5599FBzXfSVmZOdLK1m2xUtPBREzAADcjCExE0rP0e8fhUVZKWbCnjjpZxcraNbLL1sVxrrLz/p8KWZi2dmZlq/vwyFmAAC4FWLmdArbfDVmZDPQZ2fSy1jEDAAAt2JIzIj4p5FyQb6dJd1xvCJ6kGb62ZcuM10Ini/HTOxRn52xkj9KzAAAcCvGxMyjlz8j5nIgjPW3i9S05PD4l+JNwb/k6Bvbqb8QM/nZmZb4O2IGAIBbMSZmZHz8tetz32faDApfwc7uX1Gtkj+fxopjpdQzfyNmYuPu4Vk2br9PzAAAcCPmxIy6b8bV28Rj/erJONK5oh5653fETj9DfS376ENO9/VkmD00byfRsCONdN8/iJnskpZtZ8dCzAAA8L2qFzNn5nAfSmwzlE52yejS2NIdnbmWtBnJnVP8PaYL8x+eAHwuVEb67Ew6xAwAAN+rIjHzKHfZvS7lyWImEUkwuJOm05B6YZt68kORvmS/cHDWTmbDnnSaTulHKhtuS7z+WGaF/c//0OSVH5E8Ci5LOqPfHhAAAPhDFYkZAACA/4eYAQAARiNmAACA0YgZAABgNGIGAAAYjZgBAABGI2YAAIDRiBkAAGA0YgYAABiNmAEAAEYjZgAAgNGIGQAAYLRSzEwmE9nv93oJAACgulSzqHZRspgJw1C2261eAgAAqC7VLKpdlCxmVquVzGYzvQQAAFBd0+k0aRclixlluVzKfD7XSwAAANXz9vaWNEvqKGYUtYE6Q6P+Xa/XSfUwDMMwDMP85KgmKTZKUSlmFHUdKooiWSwWyZkahmEYhmGYnxzVJKpNyvf3ivwLshsxJT7pJygAAAAASUVORK5CYII=" InformativeScreenshot="a1d83d1d58113561c9115e46127ee22c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema Chamados DB' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+            </uix:NTypeInto.Target>
+          </uix:NTypeInto>
+          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT sh_usuario'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,221.333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="9891efc4-8e9a-4e44-953f-89808b44d5bf" Text="t@07E4j3&amp;KXQ" Version="V1">
+            <uix:NTypeInto.Target>
+              <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/login.php" DesignTimeRectangle="691, 721, 559, 51" ElementType="InputBoxPassword" FriendlyName="'INPUT sh_usuario'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='text' aaname='' /&gt;" Guid="c6ccb373-6e8d-4d88-8c68-f48400d1cda2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjMAAAA3CAYAAAD5XMv9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUMSURBVHhe7d2/UxppGMDx+6ctLChoKChoKK6goUhBk4LiWgoLGwsKGguLzGSYSKJGGTWGifMcL+4ui3KaU5zsznw+M88k+wO08zvvsstfAQBQY2IGAKg1MQMA1NrWmLm/v4+7u7u4ubmJ6+trY4wxxpg/OqlJUpukRnnsScykk2ez2Wqurq7i4uLCGGOMMeaPzuXlZdEnqVXKNmLmx48f8fXr12wLAKB6Uqvc3t5mW6WY+fnzZ3z58iXbAgCortPT01W7JEXMfPv2bbUyAwBQdalZzs7OVv8vYmY6ncavX7+yLQCA6krNktolKWLm8+fP2f8AAKovbxcxAwDUkpgBAGpNzAAAtSZmAIBaEzMAQK2JGQCg1sQMAFBrYgYAqDUxAwDUmpgBAGpNzAAAtSZmAIBaEzMAQK1VKGbmcXLQj05zP/b29laz3+xEf3Qc59kZyaePjeL4tumMsrMX4+jvr/c3P0zi9uHI2vlBdFbH92NwnO2L4xjkr+scbPzsB59i2HzueDKNf1rZOWmaw+WrAID3UJGYmce499+R0j2cZ+dFTPrbz8mniJnZKNobx5oxfFwUpXP6k2xfTKKfv6Y9ilm2d+2l40ufhtHMz1lNIwYn2TEAYKeqETPHg2hkf/gb/XHMF2nnIm6n4/jYbUbvaLVjZR0z7RhtLYlMKVRarVb23pPlu5a8U8ycDLIwa7eL92+sl34AgB2qRMzMRu2HP/7LWUfFdq+Jmf5BfjmpEwfrRZ53ipmTGDQejncOZnHUy85tDELOAMDuVS5mVisz2f5tXhUzk0WMs6holK/3vEfMFKtMD7/f/LD7cG661KRmAGDnKhEzMR1GKw+ENM1ufDyabo2a18XMcrv4Gb0Y59ea3iFmjotLTNmx+WF08/NfWnYCAP63asTM0mzUif38j34+++0YjM83Pufy7AeAe0frc5+Eynp1pjWcrk55MWZemicxc1xcYmoXpTWPg07+mlJIAQA7UZmYSebToxi017dm59MpLcG8PmaWPmWrM/nnV3YdM5N+dqwVeS8l5ctoPTUDADtVqZjJLc4nMfy7WQRAeUXj1ZeZVm6LD+Subvd+KWb+52Wm4nd7/FyZ0s/Z640376gCAN6kkjHzYB0e5XB5W8ws5aszrWFMdxkzi3H08v3PTi9Kd5oDAG9U4ZgpPa9llzET8zjspv2NGBz8s7OYWYx7D/t+Y8rPzQEA3qYSMXPY3Y92fxST6W12CWYR85Nh9myY5aRVlNX+XcTM0kl2+3SrVTyp920xsyitIv3Hh3zLTwXuHj57+zkA8PsqETOj4m6fbdPZiJZ1zGyfbV9n8CRmNu4wenzOK2JmcbS+xFT+EPKG9cP09va6UfqGBgDgDSoRM3F+HKMP3Wg3Sl8y2WhH9+NRTB/90f/tL5rc+iWSJcvY6RRfRFkOpld80eTxh+x99qP/zN1K5d/9gwfoAcBOVCNmAABeScwAALUmZgCAWhMzAECtiRkAoNbEDABQa2IGAKg1MQMA1JqYAQBqTcwAALUmZgCAWhMzAECtPYmZ09PTuL+/z7YAAKorNUtql6SImdlsFnd3d9kWAEB1pWZJ7ZIUMXN9fR3n5+fZFgBAdZ2dna3aJSliJrm6uoqLi4tsCwCger5//75qltxGzCTphLRCk/69ublZVY8xxhhjzJ+c1CTlRil7EjNJug41n8/j8vJytVJjjDHGGPMnJzVJapOnn++N+BcvcPKVDdqqFAAAAABJRU5ErkJggg==" InformativeScreenshot="dc1967d6964a3a240950a91ffb26e9e9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema Chamados DB' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+            </uix:NTypeInto.Target>
+          </uix:NTypeInto>
+          <uix:NSelectItem DisplayName="Select Item 'Atendente'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Atendente" ScopeIdentifier="9891efc4-8e9a-4e44-953f-89808b44d5bf" Version="V1">
+            <uix:NSelectItem.Items>
+              <scg:List x:TypeArguments="x:String" Capacity="2">
+                <x:String>Usuário</x:String>
+                <x:String>Atendente</x:String>
+              </scg:List>
+            </uix:NSelectItem.Items>
+            <uix:NSelectItem.Target>
+              <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/login.php" DesignTimeRectangle="691, 794, 559, 49" ElementType="DropDown" FriendlyName="'Atendente'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='text' class='text' aaname='' /&gt;" Guid="8c17a6d3-ac10-448b-85ac-b98918092cf5" InformativeScreenshot="5732e56865f9a496b02f90793c0a53d5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema Chamados DB' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+            </uix:NSelectItem.Target>
+          </uix:NSelectItem>
+          <uix:NClick ClickType="Single" DisplayName="Click 'Logar'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9891efc4-8e9a-4e44-953f-89808b44d5bf" Version="V1">
+            <uix:NClick.Target>
+              <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/login.php" DesignTimeRectangle="691, 907, 559, 49" ElementType="Button" FriendlyName="'Logar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='submit' aaname='Logar' check:text='Logar' /&gt;" Guid="fd721fb2-10ec-45aa-abac-e380299b417b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjMAAAA1CAYAAAC0lGr2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUCSURBVHhe7d0/SytZGIDx7CfxI/gRLC1vabksW1ha+hEsLa12LS1ukUokFjdBWQSX7EAQgiJmcxUj0RAVZTDM7rsnycnMO5kzzi33zDwv/Io7MydJc+Fh/lkThmEYhmEYj4eYYRiGYRjG6yFmGIZhGIbxeuKY+f3vnvwGAADgkenEMfNT/avUAAAAPPKPaRhiBgAAeIuYAQAAXiNmAACA14gZAADgNWIGAAB4jZgBAABeI2YAAIDXiBkAAOA1YgYAAHiNmAEAAF4jZgAAgNeIGQAA4DViBgAAeI2YAQAAXiNmAACA14gZAADgNWIGAAB4jZgBKmbv1f6Hl1COAvcxC6tBT5qvoYwju2Q2kYzDF2n227LqWLOwchrIwejNrE0tNsvN+vcnqV+eyYpjXe1iKGN76HTC0VX2GGPjPrRHLM/89x1d53w+gNIhZoCK2Y9j5kOaHfcxtfqhbD3mxUIyYTiQrUZ27eb9m0mlonmR/dS6uZ3RUvyYtNl1HLf1+GH3500k3f5JZh2A8iFmgIr5kZhZv32zx5iJQmnenNuzMMeyfnEnPdUb4aibOgOy3n9RIfMh3duOfDk9nO9vtOTLxbUcPYfmGFfMXElgV44nSawEN3a9omOm27fbzedv3ervd4cQgHIhZoCKKYyZxnUcFPNjsiFRaw9kYI8QeZODU7v99Lv07Nb5ZSzH2s9cLy4wmbUdE032X/J8nblk5IyZmZbU3+2O6e8vuJQGwH/EDFAxhTETB4WZ9ztZW94/o4MhiYmNh+ScyODhfGlNkUPZe7aLJ0PZqp/JUfxxY9lbupz1YzHzJvVFaAEoLWIGqJiimNGRMH4MMvsXsscdykEcEaEcnbvX5VJnhBbfq+Oo20+f5XHGzLcT2db367x/z4kxAGVCzAAVUxQzyf7lMx5p2ZgJpDmxG1L3w7TVdjVR+n6WlZvFGSH1u/TlrKUw0d/vnPBJdv9IjgdQXsQMUDH/m5hJHXOYfG/0JNvxdv2Z6t4c49OYmQxl51tyLIByI2aAiimKmWykZI+Z0scNHs7MNn2PS95lppzgafSka7dOn47Sa/T39G5bzu2z6Gq0ZEc/Tv5+J+vqcwCUFzEDVExRzKzdq8eyX3s5L57T4RLJ2eV8u35HzODe9Y4Xd8ys6UfBPxt1Q3ImZmbbz9Xvcj/SDaB8iBmgYopipnaefuy67rjvZOXyKbnJVl8W6qi390YmVjJrXTHTUjcOF03ydJI7ZvS9N2a4ARioBGIGqJjCmDFxsf+q3oo3eZGDTmt+hqbRkp9vhjKId0/fsptc+pm/OTiJjOkL9876HVm396+stnvSjdfamDlV75PJiY/UGZ/ZJa38mNEv3ptd7mrrfQDKiJgBKiaJGdfYJ4wagTTV5Rr3RCYsAsdlqBPZe1ZBkzvzmNGXtXr3OowU/e6bcCAbZlt+zHyVbRU/4aiT2gegfIgZoGJ2n9VZl8zox6WPZbM/lO4kSi4pTSf6kMHrQPbax6nPXeb+I5UmLsz63sisD+brk7hKP62UdiXB0hmdTf0Ompul4/Uj3ZOhbOp9AEqHmAEAAF4jZgAAgNeIGQAA4DViBgAAeI2YAQAAXiNmAACA14gZAADgNWIGAAB4jZgBAABeI2YAAIDXiBkAAOA1YgYAAHiNmAEAAF4jZgAAgNeIGQAA4LVUzPz615/ySxsAAMAf/5qGiWOGYRiGYRjGvxH5D/l9gdcGzKmzAAAAAElFTkSuQmCC" InformativeScreenshot="1dc80147a7c0c2b143a2a82f7c762abd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema Chamados DB' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+            </uix:NClick.Target>
+          </uix:NClick>
+          <uix:NClick ClickType="Single" DisplayName="Click 'Chamado'" sap:VirtualizedContainerService.HintSize="338,159.333333333333" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9891efc4-8e9a-4e44-953f-89808b44d5bf" Version="V1">
+            <uix:NClick.Target>
+              <uix:TargetAnchorable BrowserURL="https://ticket.diagnosticosdobrasil.com.br/" DesignTimeRectangle="11, 258, 106, 59" ElementType="Text" FriendlyName="'Chamado'" FullSelectorArgument="&lt;webctrl tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='' aaname='Chamado' check:innerText='Chamado' /&gt;" Guid="97a08114-668b-4e14-bb37-6ea4aea4c659" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG4AAAA/CAYAAAABif2pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALmSURBVHhe7ZfPjtMwEId5UpZF3bbPlkv/PkOE9sJeWBGxBSHQBsQ25RL2aBLbjSfJpEmzrtYj/Ub6LqnHHs/nWOmbYyiEqLDajLh9lqkvDzsgAKvNiPucJGq13gABWG1G3GKxUG+vrkDA3N5+0FhtRtxyuVTvrq9BwNzdfdRYbVbcalX8+B4EzP39J43VZsSt12s1mUxAwHz7+qCx2iBOCj9/fNdYbVbcZqNubqYgYH6ljxqrzYjbFOKm0ykImKc/vzVWmxM3m81AwByyJ43VZsRtt1s1n89BwPw97DVWG8RJAeKEAnFCgTihQJxQIE4oECcUiBMKxAkF4oQCcUKBOKG8nrgoUXm5WBlpzI8RQaSS40byREXsGP9cRhyV0opUxc0xEHc2/sWdEBKn+iHEecCzOLKJo6AGcQpxPvArzrxSJvpk1MQlRHgZVDo9DDRylUQD57MNjeoPa/n131zkSeTW0HTVU0RDHDdnGtO5xuNVHC20veEGtNFVE+NCmY2qCWWj6k1254M875uvCFMT/4aUtddqJofQPedy+fmq9OqZq6W3NwPwKq7+wvFjKjquSjcHf9VqSG7VBHa+nqZWgjmYXLJBtz9mHFdfgTvYp9YdRsDi6pvrvcp8iKNz0LC5fF57DVprrQ+s+HF4FddZMMdgcfS6a3/Y+BJHemprb+f6FPfS69KruPEfJ93i2Cb4Fjcw16e43oPdg19x3NvRoO/vQLc40qwLinNvwikhp8Xx83Xlj8OzuAJyqqiQElP4eeK464Uu4UUc9zVbX8TmknHHNei63BpMLpU5Fv/iSuhmWnGmuOIZvXrKSBOX60dcI78M+l+Q5LbG5alKuXEFzbrLeOkVeeQy4sDFgTihQJxQIE4oECcUiBMKxAkF4oQCcUKBOKFAnFAgTigQJxSIEwrECQXihAJxQoE4oUCcUCBOKBAnFIgTCsQJBeKEworLskztdjsgAKvNiHt+/qcOhU0QOnv1H3+vAocKCwumAAAAAElFTkSuQmCC" InformativeScreenshot="c351681cdf49998d9d8fc56a7f6b18d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Softdesk | Atendente: Mario' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" />
+            </uix:NClick.Target>
+          </uix:NClick>
+        </Sequence>
+      </ActivityAction>
+    </uix:NApplicationCard.Body>
+    <uix:NApplicationCard.TargetApp>
+      <uix:TargetApp Area="-11, -11, 1942, 1046" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAdCAYAAABFRCf7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAPkSURBVEhLjZX7T5NnFMf5hb7vW/4Mkb9gP2zRxELiJbup23SbVvA2Fje8ockKzkviFnVGl4ybGLzFqBsICiyDTVBRZ6hSxQoWqoBCW0pVWgR+/nrO0/d5+7altCc5eZvnOefznD7PuWSlkumJCbDOzKGz/A2FxL5unl6EU4bKtvPCEyOb9roQvlqOSdI3JwowebIAkbOFeNdRjZmeljjbWYpcx8SLNJgadCFUX47RH60Y+cEqvs++0/CsWENguxV+Uv6GD+WJgwWUVMfERP7l8IALL48UoG+rFb2bNTR/peLy5wpqVyi48KmC3wos+GOpgobVKrzf04E1G4xodVRUzH/bczgfjwl2v1DD5ZUK2r5WUV+0APdrHeiqdqDtsB2te2y4+JkiDhypTgHll+TFoZYqAfz3GwKtUvHPWhWea1WGk1mDfS407lyCRyftxpqOi4pc7D9fJiJj6B27BueOhYZDJqrjoiIXe07YRXSd36roLtIw+Ev+3A4k/ufPjT3WwNDQ3FDncTuurFRFtP302mPleTEngujmmYl0vHXEjg6K8swnCnwlVryiVHpLuSn3WUMjI5nBpwIB4TDUdR1Xv1Cxf5FFvGxopxVjDD5IET+MT/a3o6Pp4dK4cdcSNH2p4qcPs3GDHmxydw7G9YSf5GRvKo+DT4+Pp4ZLo3FKlY5f7fh7TTTiY/kWDBRbESnNQXBHFM6RvzPBMwL7n7pwp8YhqqhiqQXbP8jGUZtF3PeUhNOdh3833XcwmB7MylH/f8qBUwQ/S4/3sx55zyYNb3ZFe8LrA7EM4SLSMcnidjpjhjr8LkXO8KrlCso+ysbNdaqIeHgb3fV/sarTEaklMcEZfmH9AvGQBxdb4N6qift+WRaLVndNL0+6uw2nAIHb9tpQ97FChaKgd4sGD7VEuR/XsPmiwz4fRj2elKdJx4HrleLRLlFLvLdBQx9VH7dM3puSmSCNpUb8frxwu5PgPq9X7HPj4RxupbTj5sOdTfomQWc7aUzov+fTJ4fycXu9JnK5kx7MW5HQU80N+uFGDZE5qsasr6jTc2Tt1HT+XKUQnBp1a8LrS2io34Vb6zRx8Vw1Ico/HnRhGnSRRhp8dYXw7csTI4Tz9BzlLYNvbss1gMHh4diVyUU+mWcPv2wPRc15yANujKqHE91NBzasVlBDuVpPdu3FuRjuajagOi4qcjFI0fKIOE8D7i86gIcc/65cxmrBGTqMI7xGeeqqcxiwJCALh2024CR3NVSinYZcE3Wt1lIbmnfb4DwdHX5mW1YdkyzuBw+SjNMpV1xpSUlqqFkSa9+sY4ODuNHSMg8oK+s9vaZR86rpghYAAAAASUVORK5CYII=" InformativeScreenshot="a65ac5302da7adcf6f040783c3828582.png" Selector="&lt;html app='chrome.exe' title='Sistema Chamados DB' /&gt;" Url="https://ticket.diagnosticosdobrasil.com.br/login.php" />
+    </uix:NApplicationCard.TargetApp>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+  </uix:NApplicationCard>
+</Activity>
